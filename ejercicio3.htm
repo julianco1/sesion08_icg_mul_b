@@ -1,0 +1,32 @@
+<canvas id='tablero' width=500 height=450></canvas>
+<script>
+   function recorte(arr)
+{
+   ctx.beginPath();
+   ctx.moveTo(arr[0],arr[1]);
+    for(var i= 2; i< arr.lenght; i+=2)
+        ctx.lineTo(arr[i],arr[i+1]);
+   ctx.clip();
+}
+   function triangulo(cd,colorBorde, colorRelleno, grosor)
+{
+   
+   ctx.beginPath();
+   ctx.strokeStyle=colorBorde;
+   ctx.fillStyle= colorRelleno
+   ctx.lineWidth=grosor;
+   ctx.moveTo(cd[0],cd[1]);
+   ctx.lineTo(cd[2],cd[3]);
+   ctx.lineTo(cd[4],cd[5]);
+   ctx.closePath();
+   ctx.stroke();
+   ctx.fill();
+}
+   var c = document.getElementById('tablero')
+   var ctx= c.getContext('2d')
+   var arr1=[133,301,393,167,119,15];
+   triangulo(arr1, 'orange', 'rgba(68,114,196)');
+  
+   
+   
+</script>
