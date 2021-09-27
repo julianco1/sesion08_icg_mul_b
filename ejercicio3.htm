@@ -22,11 +22,40 @@
    ctx.stroke();
    ctx.fill();
 }
+  
+  function rectangulo(cd,colorBorde,colorRelleno,grosor);
+{
+
+   ctx.beginPath();
+   ctx.strokeStyle=colorBorde;
+   ctx.fillStyle= colorRelleno
+   ctx.lineWidth=grosor;
+   ctx.moveTo(cd[0],cd[1]);
+   ctx.lineTo(cd[2],cd[3]);
+   ctx.lineTo(cd[4],cd[5]);
+   ctx.lineTo(cd[6],cd[7]);
+   ctx.closePath();
+   ctx.stroke();
+   ctx.fill();
+}
+
    var c = document.getElementById('tablero')
    var ctx= c.getContext('2d')
    var arr1=[133,301,393,167,119,15];
+   var tri1=[19,75,16,29,371,29,371,75];
+   var tri2=[316,12,355,12,356,310,316,309];
+   var tri3=[18,236,17,276,362,277,263,236];
+   var tri4=[42,14,86,14,85,305,41,306];
    triangulo(arr1, 'orange', 'rgba(68,114,196)');
-  
+   rectangulo=[tri1, 'orange',' rgba(255,128,0)'];
+   recorte=[315,29,356,29,356,76,316,76];
+   rectangulo=[tri2, 'green','rgba(0,128,0)'];
+   recorte=[316,235,356,234,356,277,316,277];
+   rectangulo=[tri3, 'blue'. rgba(60,157,255)'];
+   recorte=[42,235,86,235,86,276,42,277;];
+   rectangulo=[tri4, 'yellow',' rgba(60,157,255)'];
+   recorte=[42,29, 85,29,86,76,42,76];
+
    
    
 </script>
